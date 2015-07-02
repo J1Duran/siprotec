@@ -71,6 +71,7 @@
                                 </div>
                              </div>
                              {{--ventana emergente objetos--}}
+                             {{--{!! Form::open (['url' => 'pase-objeto', 'method' => 'POST', 'class'=>'form-horizontal']) !!}--}}
                              <div class="box box-primary">
                                  <div class="box-body">
                                              <a data-toggle="modal" href="#example" class="btn btn-primary btn-large">Agregar objeto</a>
@@ -133,13 +134,41 @@
                                                          </div>
                                                          <div class="modal-footer">
                                                              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                             <button type="button" class="btn btn-primary">Guardar Objeto</button>
+                                                             <button type="submit" class="btn btn-primary" name="objeto" value="objeto">Guardar Objeto</button>
                                                          </div>
+
                                                      </div>
                                                  </div>
                                              </div>
                                          </div>
                                      </div>
+                             {{--{!! Form::close()!!}--}}
+                             <div class="box box-primary">
+                                 <div class="box-body">
+                                     <table id="example2" class="table table-bordered table-hover">
+                                         <thead>
+                                         <tr>
+                                             <th>ID</th>
+                                             <th>Nombre Objeto</th>
+                                             <th>Tipo</th>
+                                             <th>Origen</th>
+                                             <th>Destino</th>
+                                             <th>Accion</th>
+                                             <th>Observacion</th>
+                                             <th>Adjunto</th>
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+                                         <tr>
+                                             <td>Registo de Tabla Reportes/Diarios</td>
+                                             <td> Incidencias</td>
+                                             <td>Recursos Humanos</td>
+                                             <td><small class="label label-primary"><i class="fa fa-clock-o"></i> ACT</small></td>
+                                         </tr>
+                                         {{--</tfoot>--}}
+                                     </table>
+                                 </div><!-- /.box-body -->
+                             </div><!-- /.box -->
 
                                 <div class="box box-primary">
                                     <div class="box-body">
@@ -189,7 +218,7 @@
                         </div><!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary btn-flat">Guardar Pase</button>
+                            <button type="submit" class="btn btn-primary btn-flat"  name="pase" value="pase">Guardar Pase</button>
 
                         </div><!-- /.box-footer -->
                     {!! Form::close()!!}

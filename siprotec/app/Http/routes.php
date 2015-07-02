@@ -16,9 +16,12 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('proyectos', 'ProyectosController@index');
 Route::get('ruta_objetos_originales', 'RutaObjetoController@index');
-//Route::get('pase', 'PaseController@index');
+Route::get('pase', 'PaseController@ObjetoNuevo');
+Route::get('pasescreados', 'PaseController@pasescreados');
+Route::post('pase-objeto', 'PaseController@ObjetoNuevo');
 Route::resource('pase', 'PaseController');
-//Route::post('pase', 'PaseController@store');
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

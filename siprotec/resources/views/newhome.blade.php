@@ -344,10 +344,15 @@
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="{{ url('pase') }}">
+                    <a href="#">
                         <i class="fa fa-edit"></i> <span>Pases</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ url('pase') }}"><i class="fa fa-circle-o"></i> Crear pase</a></li>
+                        <li><a href="{{ url('pasescreados') }}"><i class="fa fa-circle-o"></i> Pases creados</a></li>
+
+                    </ul>
 
                 </li>
                 <li>
